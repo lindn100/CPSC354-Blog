@@ -1,7 +1,7 @@
 # Hello Julia!
 Hello! My name is Ryan Lindner and I am a student at Chapman University. I'm a senior but I will be graduating in Dec of 2019 instead of May.
 I will choose to work alone for Programming Languages and I am choosing to pursue the language Julia. Personally, I have not followed
-very many blogs at all, but after some quick research, I admire [Lambda the Ultimate - The Programming Language Weblog] (http://lambda-the-ultimate.org/).
+very many blogs at all, but after some quick research, I admire [Lambda the Ultimate - The Programming Language Weblog](http://lambda-the-ultimate.org/).
 
 ## How I Heard about Julia
 After attending the first class, I felt a bit overwhelmed. I had never been given the freedom to choose whatever language I wanted to pursue.
