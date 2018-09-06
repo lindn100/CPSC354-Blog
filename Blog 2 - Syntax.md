@@ -17,7 +17,7 @@ That might seem a little too basic, as anyone could've println'd. Let's look at 
 
 ```
 function areaofRectangle(length, width)
-return length * width
+  return length * width
 end
 ```
 
