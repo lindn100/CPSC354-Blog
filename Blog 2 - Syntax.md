@@ -15,11 +15,11 @@ First and foremost, throw your syntactical knowledge of C++, Java, C#, or any ot
 
 That might seem a little too basic, as anyone could've println'd. Let's look at a function in Julia (similar to methods in other languages):
 
-> function areaofRectangle(length, width)
-
->  return length * width
-
-> end
+'''
+function areaofRectangle(length, width)
+return length * width
+end
+'''
 
 In this code, notice the dynamic variable declaration, as well as the necessity to end a function, rather than having curly brackets to close it off. These two snippets will be the foundation of Julia moving forward.
 
