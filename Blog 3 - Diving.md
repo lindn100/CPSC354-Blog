@@ -1,7 +1,7 @@
 # Diving Into Some Math
 Hi there! This week, our main topic in class was Abstract Reduction Systems, which is generally a set A together with a relation. These sets are very interesting and important to us because these relations help us to understand models of computations when dealing with data sets.
 
-Because a large part of this concept is theoretical in math (discrete math-like), I decided to program a mathematical function in Julia. To put a fun twist on this, I decided to program the sum of Fibonacci numbers recursively!
+Because a large part of this concept is theoretical in math (discrete math-like), I decided to program a mathematical function in Julia. To put a fun twist on this, I decided to program the Fibonacci numbers recursively!
 
 ```
 function Fibonacci(n)
