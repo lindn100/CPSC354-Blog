@@ -1,4 +1,4 @@
-# Title
+# FileIO
 Hey there! This week, our class is still focusing on Abstract Reduction Systems, but narrowing down on the question: How do we know when/if a reduction system terminates?
 
 A nifty trick to determine an answer this question is to assign each element in your set A to a value in the natural numbers. Create a function such that A --> N (the natural numbers). Now this function implies that if a --> b, then f(a) > f(b).
