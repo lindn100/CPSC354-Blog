@@ -9,9 +9,12 @@ In case 1, we know that the natural number that we start with as input will be t
 However, in case 2, we are not guaranteed to return to the same expression as before. Consider the logic below:
 
 > 3 + 2 = 5
+>
 > 1+(1+1) + (1 + 1)
 > this equation is rewritten as 5
+>
 > However, rewriting 5 back to an expression can be done as
+>
 > (((1+1)+1)+1)+1, which is different from the first equation
 
 We could show this in a simple code example in Julia by printing the parenthesis in different ways, but I believe the idea serves as a justification for itself. Instead, let's look at Julia's implementation of types, in particular, mutable composite types:
