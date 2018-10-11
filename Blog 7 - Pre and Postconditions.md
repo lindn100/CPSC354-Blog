@@ -17,15 +17,18 @@ The loop invariant should be created so that when the condition of termination i
 A general pattern for loop invariants is:
 > 
 >   Loop invariant must be true here
-> >  while (TEST CONDITION) {
+>
+>   while (TEST CONDITION) {
+>
 >      ...
 >      ...
 >      ...
+>
 >      the loop invariant must be true here
+>
 >   }
+>
 >   Termination + Loop invariant = Goal
->   ...
-
 
 We will demonstrate a loop invariant with a simple code example in Julia:
 
