@@ -27,7 +27,7 @@ Termination + Loop invariant = Goal
 ```
 
 We will demonstrate a loop invariant with a simple code example in Julia:
-
+```
 julia> while x <= 5
            x = x + 1
        end
@@ -37,4 +37,4 @@ Here the loop invariant would be that x <= 6. Obviously, in real world examples,
 Invariants help us reason about how loops behave. It's also useful when debugging your code. If you identify an important invariant, it's easy to check that it holds even when you modify some code. 
 The basic idea is that we want a systematic way to prove properties of our code. The way we approach this is by looking at preconditions and postconditions in the code. That is, we want to prove that if some condition A holds before we run our code, some condition B holds after we run it.
 
-**Next week I will continue to tackle exercises provided by Prof. Kurz, reviewing topics we cover in class, and hopefully start to gain some progress of my software. Thanks for reading!**
+**Next week we'll continue to tackle exercises provided by Prof. Kurz, reviewing topics we cover in class, and hopefully start to gain some progress on our software. Thanks for reading!**
