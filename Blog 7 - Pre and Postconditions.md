@@ -15,24 +15,19 @@ An example of an invariant is a loop invariant. It is hard to keep track of what
 The loop invariant should be created so that when the condition of termination is attained, and the invariant is true, then the goal is reached.
 
 A general pattern for loop invariants is:
-> 
->   Loop invariant must be true here
->
->   while (TEST CONDITION) {
->
->      ...
->      ...
->      ...
->
->      the loop invariant must be true here
->
->   }
->
->   Termination + Loop invariant = Goal
+```
+Loop invariant must be true here
+   while (TEST CONDITION) {
+      ...
+      ...
+      ...
+      the loop invariant must be true here
+   }
+   Termination + Loop invariant = Goal
+```
 
 We will demonstrate a loop invariant with a simple code example in Julia:
 
-```
 julia> while x <= 5
            x = x + 1
        end
