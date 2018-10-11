@@ -23,7 +23,7 @@ Loop invariant must be true here
       ...
       the loop invariant must be true here
    }
-   Termination + Loop invariant = Goal
+Termination + Loop invariant = Goal
 ```
 
 We will demonstrate a loop invariant with a simple code example in Julia:
