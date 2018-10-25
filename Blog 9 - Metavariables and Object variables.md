@@ -34,4 +34,4 @@ The @time macro executes an expression, and returns the value of the expression,
 It inserts a "start the stopwatch" command at the beginning of the code, before passing the expression on to be executed. When the code has finished running, a "finish the stopwatch" command is added, followed by the calculations to report the elapsed time and memory usage. 
 In the example above the @time macro is the metavaraible that helps us talk about the function, which is the object varaible
 
-**That's all for this week!. Stay tuned for next week's blog post!**
+**That's all for this week! Stay tuned for next week's blog post!**
