@@ -10,8 +10,9 @@ In computer science, a well known example is Lisp, a language that is its own me
 The strongest legacy of Lisp in the Julia language is its metaprogramming support. Like Lisp, Julia represents its own code as a data structure of the language itself. Since code is represented by objects that can be created and manipulated from within the language, it is possible for a program to transform and generate its own code. 
 
 In Julia, the execution of raw source code takes place in two stages:
-Stage 1 is when your raw Julia code is parsed — converted into a form that is suitable for execution. The result of this is an abstract syntax tree, a structure that contains all your code, but in a format that is easier to manipulate than the human friendly syntax normally used. 
-Stage 2 is when that parsed code is executed. 
+* Stage 1 is when your raw Julia code is parsed (converted into a form that is suitable for execution). The result of this is an abstract syntax tree, a structure that contains all your code, but in a format that is easier to manipulate than the human friendly syntax normally used. 
+* Stage 2 is when that parsed code is executed. 
+
 With Julia's metaprogramming facilities, you can access the code after it's been parsed but before it's executed.
 This lets you do things that you can't normally do. For example, you can convert simple expressions to more complicated expressions, or examine code before it runs and change it so that it runs faster.
 
