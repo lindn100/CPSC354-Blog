@@ -23,7 +23,7 @@ println(z)
 ```
 
 In this snippet of Julia code, let's first make sure the post condition is true, given the random numbers.  0 =(4-4)* 5 = 0 * 5 = 0. This is true.
-Next, let's examine the invariant, which happens to be the same as the precondition. After two iterations of the while loop, x will be 2, z will now be 20, and y is still 5. Let's plug these values into the invariant:
+Next, let's examine the invariant, which happens to be the same as the precondition. After two iterations of the while loop, x will be 2, z will now be 10, and y is still 5. Let's plug these values into the invariant:
 10 = (4-2) * 5 = 2 * 5 = 10. This is true, and remains true for each execution of the loop.
 Finally, let's check the post-condition. 20 = (4-0) * 5 = 4 * 5 = 20. This is true.
 
