@@ -1,5 +1,5 @@
 # Universal Algebra
-We conntinued our discussion on universal algebra this week. In particular, I would like to explore the ideas of Abstract Data Types, Term algebras, Homomorphisms, and Initiality.
+We continued our discussion on universal algebra this week. In particular, I would like to explore the ideas of Abstract Data Types, Term algebras, Homomorphisms, and Initiality.
 
 An abstract data type is a data type which is defined by its functionality (how it behaves) rather than its implementation (how its coded). Note that these abstract data types are not just sets of data, but there lies algebras behind them. An example of this is a Stack, which is a LIFO structure (Last-in, First-out). This means that adding an element to a stack adds it to the top of the stack, and popping a stack removes the top-most data element.
 In this example of a Stack, we care not how it is implemented or what it may hold, but rather its functions. Different abstract data types are important to study because each has their own run-time and storage complexity. Thus, we have a whole class devoted to them!
