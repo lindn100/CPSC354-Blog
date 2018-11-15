@@ -15,9 +15,9 @@ Consider two expressions M and N:
 
 (λx.M)N ≈<sub>β</sub> M[x->N]
 
-In this rewrite rule, all occurrences of x are substituted by N after renaming the bound variables in M such that they are disjoint from all free varaibles occurring in N. Make sure the free variables do not have any similar naming conventions between the two expression and then replace x by N.
+In this rewrite rule, all occurrences of x are substituted by N after renaming the bound variables in M such that they are disjoint from all free variables occurring in N. Make sure the free variables do not have any similar naming conventions between the two expressions and then replace x by N.
 
-Next, the alpha equation is used when the x in λx.M is a bound variable, and thus need to perform capture avoiding substituion. Consier y as a fresh element for M:
+Next, the alpha equation is used when the x in λx.M is a bound variable, and thus need to perform capture avoiding substituion. Consider y as a fresh element for M:
 
 λx.M ≈<sub>α</sub> λy.M [x->y]
 
@@ -58,7 +58,7 @@ What I liked so much about this is that we are taking our understanding of λ-ca
 
 ## Instructions on how to run Julia on your machine
 
-As the semester is rapidly approaching its end, we ought to give you some instructions with how to download Julia so that you can run our PET program.
+As the semester is rapidly approaching its end, we ought to give you some instructions on how to download Julia so that you can run our PET program.
 
 1. Navigate [here](https://julialang.org/downloads/) and download the version of Julia appropriate to your machine. 
 2. After you have downloaded Julia, we highly, highly recommend that you add it's bin to your PATH, as you can then use the 'julia' command in any terminal you wish. For example, I prefer to use Git Bash and then use the 'julia PET.jl' command to execute our program.
