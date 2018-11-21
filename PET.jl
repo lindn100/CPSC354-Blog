@@ -35,7 +35,7 @@ healthIns = 0
 ltcIns = 0
 totalIns = 0
 emergencyFunds = 0
-collegeSavings = 0
+college = 0
 retirement = 0
 savingsAndInvestments = 0
 groceries = 0
@@ -377,5 +377,13 @@ elseif(clothing > 0.05*income)
     write(f, "\nWe recommend you spend less on clothing. Clothing expenses should not exceed more than 5% of your income.\n")
 elseif(loansAndDebtTotal > 0.1*income)
   write(f, "\nWe recommend you reduce your debt. Debt repayment expenses should not exceed more than 10% of your income.\n")
+elseif(utilityTotal > 0.1*income)
+  write(f, "\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\n")
+elseif(utilityTotal > 0.1*income)
+  write(f, "\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\n")  
+elseif(savingsAndInvestments > 0.1*income)
+  write(f, "\nYour savings and investments do not exceed more than 10% of your income.\n") 
+elseif(totalIns > 0.15*income)
+  write(f, "\nDo not spend more than 15% of your income on insurance.\n") 
 end
 close(f)
