@@ -293,7 +293,7 @@ print("Total Expenses: \$")
 @printf "%.2f" totalExpenses
 println()
 netIncome = income - totalExpenses
-print("Income minus Exenses: \$")
+print("Income minus Expenses: \$")
 @printf "%.2f" netIncome
 println()
 #do file IO to file
@@ -363,6 +363,19 @@ write(f, "\r\n\r\n\r\nTotal Income: \$")
 @printf(f, "%.2f", income)
 write(f, "\r\nTotal Expenses: \$")
 @printf(f, "%.2f", totalExpenses)
-write(f, "\r\nIncome minus Exenses: \$")
+write(f, "\r\nIncome minus Expenses: \$")
 @printf(f, "%.2f", netIncome)
+
+write(f, "\n*** Recommendations ***\n")
+if(groceries > 0.15*income)
+    write(f, "\nWe recommend you spend less on groceries. Groceries expenses should not exceed more than 15% of your income.\n")
+elseif(rent > 0.3*income)
+  write(f, "\nWe recommend you spend less on rent. Rent expenses should not exceed more than 30% of your income.\n")
+elseif(entertainment > 0.05*income)
+  write(f, "\nWe recommend you spend less on entertainment. Entertainment expenses should not exceed more than 5% of your income.\n")
+elseif(clothing > 0.05*income)
+    write(f, "\nWe recommend you spend less on clothing. Clothing expenses should not exceed more than 5% of your income.\n")
+elseif(loansAndDebtTotal > 0.1*income)
+  write(f, "\nWe recommend you reduce your debt. Debt repayment expenses should not exceed more than 10% of your income.\n")
+end
 close(f)
