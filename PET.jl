@@ -296,6 +296,7 @@ netIncome = income - totalExpenses
 print("Income minus Expenses: \$")
 @printf "%.2f" netIncome
 println()
+println("Check your report for recommendations!")
 #do file IO to file
 
 f = open("Report.txt", "w")
@@ -304,7 +305,7 @@ write(f, "Income\r\n")
 write(f, "1. Income: \$")
 @printf(f,"%.2f", income)
 write(f, "\r\n\r\nLoans / Debt")
-write(f, "\r\m2. Rent/Mortgage: \$")
+write(f, "\r\n2. Rent/Mortgage: \$")
 @printf(f, "%.2f", rent)
 write(f, "\r\n3. Gas/Oil: \$")
 @printf(f, "%.2f", gasAndOil)
@@ -366,24 +367,32 @@ write(f, "\r\nTotal Expenses: \$")
 write(f, "\r\nIncome minus Expenses: \$")
 @printf(f, "%.2f", netIncome)
 
-write(f, "\n*** Recommendations ***\n")
+write(f, "\r\n\r\n*** Recommendations ***\r\n")
 if(groceries > 0.15*income)
-    write(f, "\nWe recommend you spend less on groceries. Groceries expenses should not exceed more than 15% of your income.\n")
-elseif(rent > 0.3*income)
-  write(f, "\nWe recommend you spend less on rent. Rent expenses should not exceed more than 30% of your income.\n")
-elseif(entertainment > 0.05*income)
-  write(f, "\nWe recommend you spend less on entertainment. Entertainment expenses should not exceed more than 5% of your income.\n")
-elseif(clothing > 0.05*income)
-    write(f, "\nWe recommend you spend less on clothing. Clothing expenses should not exceed more than 5% of your income.\n")
-elseif(loansAndDebtTotal > 0.1*income)
-  write(f, "\nWe recommend you reduce your debt. Debt repayment expenses should not exceed more than 10% of your income.\n")
-elseif(utilityTotal > 0.1*income)
-  write(f, "\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\n")
-elseif(utilityTotal > 0.1*income)
-  write(f, "\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\n")  
-elseif(savingsAndInvestments > 0.1*income)
-  write(f, "\nYour savings and investments do not exceed more than 10% of your income.\n") 
-elseif(totalIns > 0.15*income)
-  write(f, "\nDo not spend more than 15% of your income on insurance.\n") 
+    write(f, "\r\nWe recommend you spend less on groceries. Groceries expenses should not exceed more than 15% of your income.\r\n")
 end
-close(f)
+if(rent > 0.3*income)
+  write(f, "\r\nWe recommend you spend less on rent. Rent expenses should not exceed more than 30% of your income.\r\n")
+end
+if(entertainment > 0.05*income)
+  write(f, "\r\nWe recommend you spend less on entertainment. Entertainment expenses should not exceed more than 5% of your income.\r\n")
+end
+if(clothing > 0.05*income)
+    write(f, "\r\nWe recommend you spend less on clothing. Clothing expenses should not exceed more than 5% of your income.\r\n")
+end
+if(loansAndDebtTotal > 0.1*income)
+  write(f, "\r\nWe recommend you reduce your debt. Debt repayment expenses should not exceed more than 10% of your income.\r\n")
+end
+if(utilityTotal > 0.1*income)
+  write(f, "\r\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\r\n")
+end
+if(utilityTotal > 0.1*income)
+  write(f, "\r\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\r\n")
+end
+if(savingsAndInvestments > 0.1*income)
+  write(f, "\r\nYour savings and investments do not exceed more than 10% of your income.\r\n")
+end
+if(totalIns > 0.15*income)
+  write(f, "\r\nDo not spend more than 15% of your income on insurance.\r\n")
+end
+ close(f)
