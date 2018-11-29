@@ -14,48 +14,49 @@ while(true)
     print("I don't think I understood that. Try again using 'p' or 'n': ")
 end
 
+
 #declaring variables for fields
 
-income = 0
-rent = 0
-creditCardDebt = 0
-homeEquityLoan = 0
-carLoan = 0
-studentLoan = 0
-loansAndDebtTotal = 0
-gasAndOil = 0
-electricity = 0
-telephone = 0
-waterAndSewer = 0
-utilityTotal = 0
-lifeIns = 0
-autoIns = 0
-homeIns = 0
-healthIns = 0
-ltcIns = 0
-totalIns = 0
-emergencyFunds = 0
-college = 0
-retirement = 0
-savingsAndInvestments = 0
-groceries = 0
-childCare = 0
-vacation = 0
-entertainment = 0
-clothing = 0
-gas = 0
-commuting = 0
-charity = 0
-medicalExpenses = 0
-miscTotal = 0
-totalIncome = 0
-totalExpenses = 0
-netIncome = 0
+global income = 0
+global rent = 0
+global creditCardDebt = 0
+global homeEquityLoan = 0
+global carLoan = 0
+global studentLoan = 0
+global loansAndDebtTotal = 0
+global gasAndOil = 0
+global electricity = 0
+global telephone = 0
+global waterAndSewer = 0
+global utilityTotal = 0
+global lifeIns = 0
+global autoIns = 0
+global homeIns = 0
+global healthIns = 0
+global ltcIns = 0
+global totalIns = 0
+global emergencyFunds = 0
+global collegeSavings = 0
+global retirement = 0
+global savingsAndInvestments = 0
+global groceries = 0
+global childCare = 0
+global vacation = 0
+global entertainment = 0
+global clothing = 0
+global gas = 0
+global commuting = 0
+global charity = 0
+global medicalExpenses = 0
+global miscTotal = 0
+global totalIncome = 0
+global totalExpenses = 0
+global netIncome = 0
 
 if(reportStyle == "n")
     print("Great! Let's start with your income. Please enter your income for the month: ")
     income = parse(Float32, readline())
-    income = (income *12) / 52 #taking month, converting to yearly, making it yearly
+    income = (income *12) / 52 #taking month, converting to yearly, making it weekly
     println()
     print("Now, let move onto loans and debt. Please enter your mortgage/rent payment for the month: ")
     rent  = parse(Float32, readline())
@@ -191,208 +192,775 @@ if(reportStyle == "n")
     println()
     println()
 
+    println("This is your PET")
+    println("Income")
+    println()
+    print("1. Income: \$")
+    @printf "%.2f" income
+    println()
+    println()
+    println("Loans / Debt")
+    #all the loans/debt was skipped, this needs to be fixed
+    print("2. Mortgage/Rent: \$")
+    @printf "%.2f" rent
+    println()
+    print("3. Credit Card Debt: \$")
+    @printf "%.2f" creditCardDebt
+    println()
+    print("4. Home Equity  Loan: \$")
+    @printf "%.2f" homeEquityLoan
+    println()
+    print("5. Car loan: \$")
+    @printf "%.2f" carLoan
+    println()
+    print("6. Student loan: \$")
+    @printf "%.2f" studentLoan
+    println()
+    print("Total Loans and Debt: \$")
+    @printf "%.2f" loansAndDebtTotal
+    println()
+    println("Utilities")
+    print("7. Gas/Oil: \$")
+    @printf "%.2f" gasAndOil
+    println()
+    print("8. Electricity: \$")
+    @printf "%.2f" electricity
+    println()
+    print("9. Telephone: \$")
+    @printf "%.2f" telephone
+    println()
+    print("10. Water and Sewer: \$")
+    @printf "%.2f" waterAndSewer
+    println()
+    print("Total Utilities: \$")
+    @printf "%.2f" utilityTotal
+    println()
+    println("Insurance Premiums")
+    print("11. Life Insurance: \$")
+    @printf "%.2f" lifeIns
+    println()
+    print("12. Auto Insurance: \$")
+    @printf "%.2f" autoIns
+    println()
+    print("13. Home Insurance: \$")
+    @printf "%.2f" homeIns
+    println()
+    print("14. Health Insurance: \$")
+    @printf "%.2f" healthIns
+    println()
+    print("15. Long Term Care: \$")
+    @printf "%.2f" ltcIns
+    println()
+    print("Total Insurance Premiums: \$")
+    @printf "%.2f" totalIns
+    println()
+    println()
+    println("Savings and Investments")
+    print("16. Emergency Fund: \$")
+    @printf "%.2f" emergencyFunds
+    println()
+    print("17. College Savings: \$")
+    @printf "%.2f" collegeSavings
+    println()
+    print("18. Retirement: \$")
+    @printf "%.2f" retirement
+    println()
+    print("Total Savings and Investments: \$")
+    @printf "%.2f" savingsAndInvestments
+    println()
+    println()
+    println("Miscellaneous")
+    print("19. Groceries: \$")
+    @printf "%.2f" groceries
+    println()
+    print("20. Child Care: \$")
+    @printf "%2f" childCare
+    println()
+    print("21. Vacation: \$")
+    @printf "%.2f" vacation
+    println()
+    print("22. Entertainment: \$")
+    @printf "%.2f" entertainment
+    println()
+    print("23. Clothing: \$")
+    @printf "%.2f" clothing
+    println()
+    print("24. Gas: \$")
+    @printf "%.2f" gas
+    println()
+    print("25. Commuting: \$")
+    @printf "%.2f" commuting
+    println()
+    print("26. Charitable Contributions: \$")
+    @printf "%.2f" charity
+    println()
+    print("27. Out-of-Pocket Medical Expenses: \$")
+    @printf "%.2f" medicalExpenses
+    println()
+    print("Total Miscellaneous costs: \$")
+    @printf "%.2f" miscTotal
+    println()
+    println()
+    println()
+    print("Total Income: \$")
+    @printf "%.2f" income
+    println()
+    print("Total Expenses: \$")
+    @printf "%.2f" totalExpenses
+    println()
+    netIncome = income - totalExpenses
+    print("Income minus Exenses: \$")
+    @printf "%.2f" netIncome
+    println()
+
+    f = open("Report.txt", "w")
+    write(f, "This is your PET \r\n")
+    write(f, "Income\r\n")
+    write(f, "1. Income: \$")
+    @printf(f, "%.2f", income)
+    write(f, "\r\n\r\nLoans / Debt")
+    write(f, "\r\n2. Mortgage/Rent: \$")
+    @printf(f, "%.2f", rent)
+    write(f, "\r\n3. Credit Card Debt: \$")
+    @printf(f, "%.2f", creditCardDebt)
+    write(f, "\r\n4. Car loan debt: \$")
+    @printf(f, "%.2f", carLoan)
+    write(f, "\r\n5. Home equity loan: \$")
+    @printf(f, "%.2f", homeEquityLoan)
+    write(f, "\r\n6. Student loan debt: \$")
+    @printf(f, "%.2f", studentLoan)
+    write(f, "\r\nTotal Loans and Debt: \$")
+    @printf(f, "%.2f", loansAndDebtTotal)
+    write(f, "\r\n\r\nUtilities")
+    write(f, "\r\n7. Gas/Oil: \$")
+    @printf(f, "%.2f", gasAndOil)
+    write(f, "\r\n8. Electricity: \$")
+    @printf(f, "%.2f", electricity)
+    write(f, "\r\n9. Telephone: \$")
+    @printf(f, "%.2f", telephone)
+    write(f, "\r\n10. Water and Sewer: \$")
+    @printf(f, "%.2f", waterAndSewer)
+    write(f, "\r\n\r\nInsurance Premiums")
+    write(f, "\r\n11. Life Insurance: \$")
+    @printf(f, "%.2f", lifeIns)
+    write(f, "\r\n12. Auto Insurance: \$")
+    @printf(f, "%.2f", autoIns)
+    write(f, "\r\n13. Home Insurance: \$")
+    @printf(f, "%.2f", homeIns)
+    write(f, "\r\n14. Health Insurance: \$")
+    @printf(f, "%.2f", healthIns)
+    write(f, "\r\n15. Long Term Care: \$")
+    @printf(f, "%.2f", ltcIns)
+    write(f, "\r\nTotal Insurance Premiums: \$")
+    @printf(f, "%.2f", totalIns)
+    write(f, "\r\n\r\nSavings and Investments")
+    write(f, "\r\n16. Emergency Fund: \$")
+    @printf(f, "%.2f", emergencyFunds)
+    write(f, "\r\n17. College Savings: \$")
+    @printf(f, "%.2f", collegeSavings)
+    write(f, "\r\n18. Retirement: \$")
+    @printf(f, "%.2f", retirement)
+    write(f, "\r\nTotal Savings and Investments: \$")
+    @printf(f, "%.2f", savingsAndInvestments)
+    write(f, "\r\n\r\nMiscellaneous")
+    write(f, "\r\n19. Groceries: \$")
+    @printf(f, "%.2f", groceries)
+    write(f, "\r\n20. Child Care: \$")
+    @printf(f, "%.2f", childCare)
+    write(f, "\r\n21. Vacation: \$")
+    @printf(f, "%.2f", vacation)
+    write(f, "\r\n22. Entertainment: \$")
+    @printf(f, "%.2f", entertainment)
+    write(f, "\r\n23. Clothing: \$")
+    @printf(f, "%.2f", clothing)
+    write(f, "\r\n24. Gas: \$")
+    @printf(f, "%.2f", gas)
+    write(f, "\r\n25. Commuting: \$")
+    @printf(f, "%.2f", commuting)
+    write(f, "\r\n26. Charitable Contributions: \$")
+    @printf(f, "%.2f", charity)
+    write(f, "\r\n27. Out-of-Pocket Medical Expenses: \$")
+    @printf(f, "%.2f", medicalExpenses)
+    write(f, "\r\nTotal Miscellaneous costs: \$")
+    @printf(f, "%.2f", miscTotal)
+    write(f, "\r\n\r\n\r\nTotal Income: \$")
+    @printf(f, "%.2f", income)
+    write(f, "\r\nTotal Expenses: \$")
+    @printf(f, "%.2f", totalExpenses)
+    write(f, "\r\nIncome minus Exenses: \$")
+    @printf(f, "%.2f", netIncome)
+    close(f)
+
+    f = open("dataForNextReport.txt", "w")
+    @printf(f, "%.2f", income)
+    write(f, "\r\n")
+    @printf(f, "%.2f", rent)
+    write(f, "\r\n")
+    @printf(f, "%.2f", creditCardDebt)
+    write(f, "\r\n")
+    @printf(f, "%.2f", homeEquityLoan)
+    write(f, "\r\n")
+    @printf(f, "%.2f", carLoan)
+    write(f, "\r\n")
+    @printf(f, "%.2f", studentLoan)
+    write(f, "\r\n")
+    @printf(f, "%.2f", gasAndOil)
+    write(f, "\r\n")
+    @printf(f, "%.2f", electricity)
+    write(f, "\r\n")
+    @printf(f, "%.2f", telephone)
+    write(f, "\r\n")
+    @printf(f, "%.2f", waterAndSewer)
+    write(f, "\r\n")
+    @printf(f, "%.2f", lifeIns)
+    write(f, "\r\n")
+    @printf(f, "%.2f", autoIns)
+    write(f, "\r\n")
+    @printf(f, "%.2f", homeIns)
+    write(f, "\r\n")
+    @printf(f, "%.2f", healthIns)
+    write(f, "\r\n")
+    @printf(f, "%.2f", ltcIns)
+    write(f, "\r\n")
+    @printf(f, "%.2f", emergencyFunds)
+    write(f, "\r\n")
+    @printf(f, "%.2f", collegeSavings)
+    write(f, "\r\n")
+    @printf(f, "%.2f", retirement)
+    write(f, "\r\n")
+    @printf(f, "%.2f", groceries)
+    write(f, "\r\n")
+    @printf(f, "%.2f", childCare)
+    write(f, "\r\n")
+    @printf(f, "%.2f", vacation)
+    write(f, "\r\n")
+    @printf(f, "%.2f", entertainment)
+    write(f, "\r\n")
+    @printf(f, "%.2f", clothing)
+    write(f, "\r\n")
+    @printf(f, "%.2f", gas)
+    write(f, "\r\n")
+    @printf(f, "%.2f", commuting)
+    write(f, "\r\n")
+    @printf(f, "%.2f", charity)
+    write(f, "\r\n")
+    @printf(f, "%.2f", medicalExpenses)
+
+    close(f)
+
+
+
 else
-    #ask for file name, load stuff in from the file
-end
+    oldInputArray = Array{Float64}(undef, 27)
+    f = open("dataForNextReport.txt", "r")
+    local i = 1
+    for line in eachline(f)
+        chomp(line)
+        oldInputArray[i] = parse(Float64, line)
+        i = i + 1
+    end
+    println("Below is your PET for the previous week. Please update any values accordingly (fields are weekly).")
+     local tempincome = oldInputArray[1]
+     local temprent = oldInputArray[2]
+     local tempcreditCardDebt = oldInputArray[3]
+     local temphomeEquityLoan = oldInputArray[4]
+     local tempcarLoan = oldInputArray[5]
+     local tempstudentLoan = oldInputArray[6]
+     local tempgasAndOil = oldInputArray[7]
+     local tempelectricity = oldInputArray[8]
+     local temptelephone = oldInputArray[9]
+     local tempwaterAndSewer = oldInputArray[10]
+     local templifeIns = oldInputArray[11]
+     local tempautoIns = oldInputArray[12]
+     local temphomeIns = oldInputArray[13]
+     local temphealthIns = oldInputArray[14]
+     local templtcIns = oldInputArray[15]
+     local tempemergencyFunds = oldInputArray[16]
+     local tempcollegeSavings = oldInputArray[17]
+     local tempretirement = oldInputArray[18]
+     local tempgroceries = oldInputArray[19]
+     local tempchildCare = oldInputArray[20]
+     local tempvacation = oldInputArray[21]
+     local tempentertainment = oldInputArray[22]
+     local tempclothing = oldInputArray[23]
+     local tempgas = oldInputArray[24]
+     local tempcommuting = oldInputArray[25]
+     local tempcharity = oldInputArray[26]
+     local tempmedicalExpenses = oldInputArray[27]
 
-println("This is your PET")
-println("Income")
-println()
-print("1. Income: \$")
-@printf "%.2f" income
-println()
-println()
-println("Loans / Debt")
-print("2. Gas/Oil: \$")
-@printf "%.2f" gasAndOil
-println()
-print("3. Electricity: \$")
-@printf "%.2f" electricity
-println()
-print("4. Telephone: \$")
-@printf "%.2f" electricity
-println()
-print("5. Water and Sewer: \$")
-@printf "%.2f" waterAndSewer
-println()
-print("Total Loans and Debt: \$")
-@printf "%.2f" loansAndDebtTotal
-println()
-println()
-println("Insurance Premiums")
-print("6. Life Insurance: \$")
-@printf "%.2f" lifeIns
-println()
-print("7. Auto Insurance: \$")
-@printf "%.2f" autoIns
-println()
-print("8. Home Insurance: \$")
-@printf "%.2f" homeIns
-println()
-print("9. Health Insurance: \$")
-@printf "%.2f" healthIns
-println()
-print("10. Long Term Care: \$")
-@printf "%.2f" ltcIns
-println()
-print("Total Insurance Premiums: \$")
-@printf "%.2f" totalIns
-println()
-println()
-println("Savings and Investments")
-print("11. Emergency Fund: \$")
-@printf "%.2f" emergencyFunds
-println()
-print("12. College Savings: \$")
-@printf "%.2f" collegeSavings
-println()
-print("13. Retirement: \$")
-@printf "%.2f" retirement
-println()
-print("Total Savings and Investments: \$")
-@printf "%.2f" savingsAndInvestments
-println()
-println()
-println("Miscellaneous")
-print("14. Groceries: \$")
-@printf "%.2f" groceries
-println()
-print("15. Child Care: \$")
-@printf "%.2f" childCare
-println()
-print("16. Vacation: \$")
-@printf "%.2f" vacation
-println()
-print("17. Entertainment: \$")
-@printf "%.2f" entertainment
-println()
-print("18. Clothing: \$")
-@printf "%.2f" clothing
-println()
-print("19. Gas: \$")
-@printf "%.2f" gas
-println()
-print("20. Commuting: \$")
-@printf "%.2f" commuting
-println()
-print("21. Charitable Contributions: \$")
-@printf "%.2f" charity
-println()
-print("22. Out-of-Pocket Medical Expenses: \$")
-@printf "%.2f" medicalExpenses
-println()
-print("Total Miscellaneous costs: \$")
-@printf "%.2f" miscTotal
-println()
-println()
-println()
-print("Total Income: \$")
-@printf "%.2f" income
-println()
-print("Total Expenses: \$")
-@printf "%.2f" totalExpenses
-println()
-netIncome = income - totalExpenses
-print("Income minus Expenses: \$")
-@printf "%.2f" netIncome
-println()
-println("Check your report for recommendations!")
-#do file IO to file
+     local temploansAndDebtTotal = 0
+     local temputilityTotal = 0
+     local temptotalExpenses = 0
+     local temptotalIns = 0
+     local tempsavingsAndInvestments = 0
+     local tempmiscTotal = 0
+     local tempnetIncome = 0
 
-f = open("Report.txt", "w")
-write(f, "This is your PET \r\n")
-write(f, "Income\r\n")
-write(f, "1. Income: \$")
-@printf(f,"%.2f", income)
-write(f, "\r\n\r\nLoans / Debt")
-write(f, "\r\n2. Rent/Mortgage: \$")
-@printf(f, "%.2f", rent)
-write(f, "\r\n3. Gas/Oil: \$")
-@printf(f, "%.2f", gasAndOil)
-write(f, "\r\n4. Electricity: \$")
-@printf(f, "%.2f", electricity)
-write(f, "\r\n5. Telephone: \$")
-@printf(f, "%.2f", electricity)
-write(f, "\r\n6. Water and Sewer: \$")
-@printf(f,"%.2f", waterAndSewer)
-write(f, "\r\nTotal Loans and Debt: \$")
-@printf(f,"%.2f", loansAndDebtTotal)
-write(f, "\r\n\r\nInsurance Premiums")
-write(f, "\r\n7. Life Insurance: \$")
-@printf(f,"%.2f", lifeIns)
-write(f, "\r\n8. Auto Insurance: \$")
-@printf(f, "%.2f", autoIns)
-write(f, "\r\n9. Home Insurance: \$")
-@printf(f, "%.2f", homeIns)
-write(f, "\r\n10. Health Insurance: \$")
-@printf(f, "%.2f", healthIns)
-write(f, "\r\n11. Long Term Care: \$")
-@printf(f, "%.2f", ltcIns)
-write(f, "\r\nTotal Insurance Premiums: \$")
-@printf(f,"%.2f", totalIns)
-write(f, "\r\n\r\nSavings and Investments")
-write(f, "\r\n12. Emergency Fund: \$")
-@printf(f, "%.2f", emergencyFunds)
-write(f, "\r\n13. College Savings: \$")
-@printf(f, "%.2f", collegeSavings)
-write(f, "\r\n14. Retirement: \$")
-@printf(f, "%.2f", retirement)
-write(f, "\r\nTotal Savings and Investments: \$")
-@printf(f, "%.2f", savingsAndInvestments)
-write(f, "\r\n\r\nMiscellaneous")
-write(f, "\r\n15. Groceries: \$")
-@printf(f, "%.2f", groceries)
-write(f, "\r\n16. Child Care: \$")
-@printf(f, "%.2f", childCare)
-write(f, "\r\n17. Vacation: \$")
-@printf(f, "%.2f", vacation)
-write(f, "\r\n18. Entertainment: \$")
-@printf(f, "%.2f", entertainment)
-write(f, "\r\n19. Clothing: \$")
-@printf(f, "%.2f", clothing)
-write(f, "\r\n20. Gas: \$")
-@printf(f, "%.2f", gas)
-write(f, "\r\n21. Commuting: \$")
-@printf(f, "%.2f", commuting)
-write(f, "\r\n22. Charitable Contributions: \$")
-@printf(f, "%.2f", charity)
-write(f, "\r\n23. Out-of-Pocket Medical Expenses: \$")
-@printf(f, "%.2f", medicalExpenses)
-write(f, "\r\nTotal Miscellaneous costs: \$")
-@printf(f, "%.2f", miscTotal)
-write(f, "\r\n\r\n\r\nTotal Income: \$")
-@printf(f, "%.2f", income)
-write(f, "\r\nTotal Expenses: \$")
-@printf(f, "%.2f", totalExpenses)
-write(f, "\r\nIncome minus Expenses: \$")
-@printf(f, "%.2f", netIncome)
+    while(true)
+        print("1. Income: \$")
+        @printf "%.2f" tempincome
+        println()
+        print("2. Mortgage/Rent: \$")
+        @printf "%.2f" temprent
+        println()
+        print("3. Credit Card Debt: \$")
+        @printf "%.2f" tempcreditCardDebt
+        println()
+        print("4. Home Equity  Loan: \$")
+        @printf "%.2f" temphomeEquityLoan
+        println()
+        print("5. Car loan: \$")
+        @printf "%.2f" tempcarLoan
+        println()
+        print("6. Student loan: \$")
+        @printf "%.2f" tempstudentLoan
+        println()
+        print("7. Gas/Oil: \$")
+        @printf "%.2f" tempgasAndOil
+        println()
+        print("8. Electricity: \$")
+        @printf "%.2f" tempelectricity
+        println()
+        print("9. Telephone: \$")
+        @printf "%.2f" temptelephone
+        println()
+        print("10. Water and Sewer: \$")
+        @printf "%.2f" tempwaterAndSewer
+        println()
+        print("11. Life Insurance: \$")
+        @printf "%.2f" templifeIns
+        println()
+        print("12. Auto Insurance: \$")
+        @printf "%.2f" tempautoIns
+        println()
+        print("13. Home Insurance: \$")
+        @printf "%.2f" temphomeIns
+        println()
+        print("14. Health Insurance: \$")
+        @printf "%.2f" temphealthIns
+        println()
+        print("15. Long Term Care: \$")
+        @printf "%.2f" templtcIns
+        println()
+        print("16. Emergency Fund: \$")
+        @printf "%.2f" tempemergencyFunds
+        println()
+        print("17. College Savings: \$")
+        @printf "%.2f" tempcollegeSavings
+        println()
+        print("18. Retirement: \$")
+        @printf "%.2f" tempretirement
+        println()
+        print("19. Groceries: \$")
+        @printf "%.2f" tempgroceries
+        println()
+        print("20. Child Care: \$")
+        @printf "%.2f" tempchildCare
+        println()
+        print("21. Vacation: \$")
+        @printf "%.2f" tempvacation
+        println()
+        print("22. Entertainment: \$")
+        @printf "%.2f" tempentertainment
+        println()
+        print("23. Clothing: \$")
+        @printf "%.2f" tempclothing
+        println()
+        print("24. Gas: \$")
+        @printf "%.2f" tempgas
+        println()
+        print("25. Commuting: \$")
+        @printf "%.2f" tempcommuting
+        println()
+        print("26. Charitable Contributions: \$")
+        @printf "%.2f" tempcharity
+        println()
+        print("27. Out-of-Pocket Medical Expenses: \$")
+        @printf "%.2f" tempmedicalExpenses
+        println()
+        println("Do you want to change anything? If so, enter the corresponding number in front, else type 28: ")
+        choice = parse(Int32, readline())
+        if(choice == 1)
+            print("Enter your new income: \$")
+            tempincome = parse(Float32, readline())
+            println()
+        elseif(choice == 2)
+            print("Enter your mortgage/rent: \$")
+            temprent = parse(Float32, readline())
+            println()
+        elseif(choice == 3)
+            print("Enter your credit card debt payment: \$")
+            tempcreditCardDebt = parse(Float32, readline())
+            println()
+        elseif(choice == 4)
+            print("Enter your home equity loan payment: \$")
+            temphomeEquityLoan = parse(Float32, readline())
+            println()
+        elseif(choice == 5)
+            print("Enter your car loan payment: \$")
+            tempcarLoan = parse(Float32, readline())
+        elseif(choice == 6)
+            print("Enter your student loan payment: \$")
+            tempstudentLoan = parse(Float32, readline())
+        elseif(choice == 7)
+            print("Enter your gas and oil payment: \$")
+            tempgasAndOil = parse(Float32, readline())
+            println()
+        elseif(choice == 8)
+            print("Enter your electricity payment: \$")
+            tempelectricity = parse(Float32, readline())
+            println()
+        elseif(choice == 9)
+            print("Enter your telephone payment: \$")
+            temptelephone = parse(Float32, readline())
+            println()
+        elseif(choice == 10)
+            print("Enter your water and sewer payment: \$")
+            tempwaterAndSewer = parse(Float32, readline())
+            println()
+        elseif(choice == 11)
+            print("Enter your life insurance payment: \$")
+            templifeIns = parse(Float32, readline())
+            println()
+        elseif(choice == 12)
+            print("Enter your auto insurance payment: \$")
+            tempautoIns = parse(Float32, readline())
+            println()
+        elseif(choice == 13)
+            print("Enter your home insurance payment: \$")
+            temphomeIns = parse(Float32, readline())
+            println()
+        elseif(choice == 14)
+            print("Enter your health insurance payment: \$")
+            temphealthIns = parse(Float32, readline())
+            println()
+        elseif(choice == 15)
+            print("Enter your long-term care payment: \$")
+            templtcIns = parse(Float32, readline())
+            println()
+        elseif(choice == 16)
+            print("Enter your emergency funds savings: \$")
+            tempemergencyFunds = parse(Float32, readline())
+            println()
+        elseif(choice == 17)
+            print("Enter your college savings: \$")
+            tempcollegeSavings = parse(Float32, readline())
+            println()
+        elseif(choice == 18)
+            print("Enter your retirement savings: \$")
+            tempretirement = parse(Float32, readline())
+            println()
+        elseif(choice == 19)
+            print("Enter your groceries payments: \$")
+            tempgroceries = parse(Float32, readline())
+            println()
+        elseif(choice == 20)
+            print("Enter your child care payments: \$")
+            tempchildCare = parse(Float32, readline())
+            println()
+        elseif(choice == 21)
+            print("Enter your vacation savings/payments: \$")
+            tempvacation = parse(Float32, readline())
+            println()
+        elseif(choice == 22)
+            print("Enter your entertainment payments: \$")
+            tempentertainment = parse(Float32, readline())
+            println()
+        elseif(choice == 23)
+            print("Enter your clothing payments: \$")
+            tempclothing = parse(Float32, readline())
+            println()
+        elseif(choice == 24)
+            print("Enter your gas payments: \$")
+            tempgas = parse(Float32, readline())
+            println()
+        elseif(choice == 25)
+            print("Enter your commuting payments: \$")
+            tempcommuting = parse(Float32, readline())
+            println()
+        elseif(choice == 26)
+            print("Enter your charity payments: \$")
+            tempcharity = parse(Float32, readline())
+            println()
+        elseif(choice == 27)
+            print("Enter your medical expenses: \$")
+            tempmedicalExpenses = parse(Float32, readline())
+            println()
+        else
+            temploansAndDebtTotal = temprent + tempcreditCardDebt + temphomeEquityLoan + tempcarLoan + tempstudentLoan
+            temptotalExpenses += temploansAndDebtTotal
 
-write(f, "\r\n\r\n*** Recommendations ***\r\n")
-if(groceries > 0.15*income)
-    write(f, "\r\nWe recommend you spend less on groceries. Groceries expenses should not exceed more than 15% of your income.\r\n")
+            temputilityTotal = tempgasAndOil + tempelectricity + temptelephone + tempwaterAndSewer
+            temptotalExpenses += temputilityTotal
+
+            temptotalIns = templifeIns + tempautoIns + temphomeIns + temphealthIns + templtcIns
+            temptotalExpenses += temptotalIns
+
+            tempsavingsAndInvestments = tempemergencyFunds + tempcollegeSavings + tempretirement
+            temptotalExpenses += tempsavingsAndInvestments
+
+            tempmiscTotal = tempgroceries + tempchildCare + tempvacation + tempentertainment + tempclothing + tempgas + tempcommuting + tempcharity + tempmedicalExpenses
+            temptotalExpenses += tempmiscTotal
+
+            println("This is your PET")
+            println("Income")
+            println()
+            print("1. Income: \$")
+            @printf "%.2f" tempincome
+            println()
+            println()
+            println("Loans / Debt")
+            print("2. Mortgage/Rent: \$")
+            @printf "%.2f" temprent
+            println()
+            print("3. Credit Card Debt: \$")
+            @printf "%.2f" tempcreditCardDebt
+            println()
+            print("4. Home Equity  Loan: \$")
+            @printf "%.2f" temphomeEquityLoan
+            println()
+            print("5. Car loan: \$")
+            @printf "%.2f" tempcarLoan
+            println()
+            print("6. Student loan: \$")
+            @printf "%.2f" tempstudentLoan
+            println()
+            print("Total Loans and Debt: \$")
+            @printf "%.2f" temploansAndDebtTotal
+            println()
+            println("Utilities")
+            print("7. Gas/Oil: \$")
+            @printf "%.2f" tempgasAndOil
+            println()
+            print("8. Electricity: \$")
+            @printf "%.2f" tempelectricity
+            println()
+            print("9. Telephone: \$")
+            @printf "%.2f" temptelephone
+            println()
+            print("10. Water and Sewer: \$")
+            @printf "%.2f" tempwaterAndSewer
+            println()
+            print("Total Utilities: \$")
+            @printf "%.2f" temputilityTotal
+            println()
+            println("Insurance Premiums")
+            print("11. Life Insurance: \$")
+            @printf "%.2f" templifeIns
+            println()
+            print("12. Auto Insurance: \$")
+            @printf "%.2f" tempautoIns
+            println()
+            print("13. Home Insurance: \$")
+            @printf "%.2f" temphomeIns
+            println()
+            print("14. Health Insurance: \$")
+            @printf "%.2f" temphealthIns
+            println()
+            print("15. Long Term Care: \$")
+            @printf "%.2f" templtcIns
+            println()
+            print("Total Insurance Premiums: \$")
+            @printf "%.2f" temptotalIns
+            println()
+            println()
+            println("Savings and Investments")
+            print("16. Emergency Fund: \$")
+            @printf "%.2f" tempemergencyFunds
+            println()
+            print("17. College Savings: \$")
+            @printf "%.2f" tempcollegeSavings
+            println()
+            print("18. Retirement: \$")
+            @printf "%.2f" tempretirement
+            println()
+            print("Total Savings and Investments: \$")
+            @printf "%.2f" tempsavingsAndInvestments
+            println()
+            println()
+            println("Miscellaneous")
+            print("19. Groceries: \$")
+            @printf "%.2f" tempgroceries
+            println()
+            print("20. Child Care: \$")
+            @printf "%2f" tempchildCare
+            println()
+            print("21. Vacation: \$")
+            @printf "%.2f" tempvacation
+            println()
+            print("22. Entertainment: \$")
+            @printf "%.2f" tempentertainment
+            println()
+            print("23. Clothing: \$")
+            @printf "%.2f" tempclothing
+            println()
+            print("24. Gas: \$")
+            @printf "%.2f" tempgas
+            println()
+            print("25. Commuting: \$")
+            @printf "%.2f" tempcommuting
+            println()
+            print("26. Charitable Contributions: \$")
+            @printf "%.2f" tempcharity
+            println()
+            print("27. Out-of-Pocket Medical Expenses: \$")
+            @printf "%.2f" tempmedicalExpenses
+            println()
+            print("Total Miscellaneous costs: \$")
+            @printf "%.2f" tempmiscTotal
+            println()
+            println()
+            println()
+            print("Total Income: \$")
+            @printf "%.2f" tempincome
+            println()
+            print("Total Expenses: \$")
+            @printf "%.2f" temptotalExpenses
+            println()
+            tempnetIncome = tempincome - temptotalExpenses
+            print("Income minus Exenses: \$")
+            @printf "%.2f" tempnetIncome
+            println()
+
+            f = open("Report.txt", "w")
+            write(f, "This is your PET \r\n")
+            write(f, "Income\r\n")
+            write(f, "1. Income: \$")
+            @printf(f, "%.2f", tempincome)
+            write(f, "\r\n\r\nLoans / Debt")
+            write(f, "\r\n2. Mortgage/Rent: \$")
+            @printf(f, "%.2f", temprent)
+            write(f, "\r\n3. Credit Card Debt: \$")
+            @printf(f, "%.2f", tempcreditCardDebt)
+            write(f, "\r\n4. Car loan debt: \$")
+            @printf(f, "%.2f", tempcarLoan)
+            write(f, "\r\n5. Home equity loan: \$")
+            @printf(f, "%.2f", temphomeEquityLoan)
+            write(f, "\r\n6. Student loan debt: \$")
+            @printf(f, "%.2f", tempstudentLoan)
+            write(f, "\r\nTotal Loans and Debt: \$")
+            @printf(f, "%.2f", temploansAndDebtTotal)
+            write(f, "\r\n\r\nUtilities")
+            write(f, "\r\n7. Gas/Oil: \$")
+            @printf(f, "%.2f", tempgasAndOil)
+            write(f, "\r\n8. Electricity: \$")
+            @printf(f, "%.2f", tempelectricity)
+            write(f, "\r\n9. Telephone: \$")
+            @printf(f, "%.2f", temptelephone)
+            write(f, "\r\n10. Water and Sewer: \$")
+            @printf(f, "%.2f", tempwaterAndSewer)
+            write(f, "\r\n\r\nInsurance Premiums")
+            write(f, "\r\n11. Life Insurance: \$")
+            @printf(f, "%.2f", templifeIns)
+            write(f, "\r\n12. Auto Insurance: \$")
+            @printf(f, "%.2f", tempautoIns)
+            write(f, "\r\n13. Home Insurance: \$")
+            @printf(f, "%.2f", temphomeIns)
+            write(f, "\r\n14. Health Insurance: \$")
+            @printf(f, "%.2f", temphealthIns)
+            write(f, "\r\n15. Long Term Care: \$")
+            @printf(f, "%.2f", templtcIns)
+            write(f, "\r\nTotal Insurance Premiums: \$")
+            @printf(f, "%.2f", temptotalIns)
+            write(f, "\r\n\r\nSavings and Investments")
+            write(f, "\r\n16. Emergency Fund: \$")
+            @printf(f, "%.2f", tempemergencyFunds)
+            write(f, "\r\n17. College Savings: \$")
+            @printf(f, "%.2f", tempcollegeSavings)
+            write(f, "\r\n18. Retirement: \$")
+            @printf(f, "%.2f", tempretirement)
+            write(f, "\r\nTotal Savings and Investments: \$")
+            @printf(f, "%.2f", tempsavingsAndInvestments)
+            write(f, "\r\n\r\nMiscellaneous")
+            write(f, "\r\n19. Groceries: \$")
+            @printf(f, "%.2f", tempgroceries)
+            write(f, "\r\n20. Child Care: \$")
+            @printf(f, "%.2f", tempchildCare)
+            write(f, "\r\n21. Vacation: \$")
+            @printf(f, "%.2f", tempvacation)
+            write(f, "\r\n22. Entertainment: \$")
+            @printf(f, "%.2f", tempentertainment)
+            write(f, "\r\n23. Clothing: \$")
+            @printf(f, "%.2f", tempclothing)
+            write(f, "\r\n24. Gas: \$")
+            @printf(f, "%.2f", tempgas)
+            write(f, "\r\n25. Commuting: \$")
+            @printf(f, "%.2f", tempcommuting)
+            write(f, "\r\n26. Charitable Contributions: \$")
+            @printf(f, "%.2f", tempcharity)
+            write(f, "\r\n27. Out-of-Pocket Medical Expenses: \$")
+            @printf(f, "%.2f", tempmedicalExpenses)
+            write(f, "\r\nTotal Miscellaneous costs: \$")
+            @printf(f, "%.2f", tempmiscTotal)
+            write(f, "\r\n\r\n\r\nTotal Income: \$")
+            @printf(f, "%.2f", tempincome)
+            write(f, "\r\nTotal Expenses: \$")
+            @printf(f, "%.2f", temptotalExpenses)
+            write(f, "\r\nIncome minus Exenses: \$")
+            @printf(f, "%.2f", tempnetIncome)
+            close(f)
+
+            f = open("dataForNextReport.txt", "w")
+            @printf(f, "%.2f", tempincome)
+            write(f, "\r\n")
+            @printf(f, "%.2f", temprent)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempcreditCardDebt)
+            write(f, "\r\n")
+            @printf(f, "%.2f", temphomeEquityLoan)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempcarLoan)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempstudentLoan)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempgasAndOil)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempelectricity)
+            write(f, "\r\n")
+            @printf(f, "%.2f", temptelephone)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempwaterAndSewer)
+            write(f, "\r\n")
+            @printf(f, "%.2f", templifeIns)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempautoIns)
+            write(f, "\r\n")
+            @printf(f, "%.2f", temphomeIns)
+            write(f, "\r\n")
+            @printf(f, "%.2f", temphealthIns)
+            write(f, "\r\n")
+            @printf(f, "%.2f", templtcIns)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempemergencyFunds)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempcollegeSavings)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempretirement)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempgroceries)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempchildCare)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempvacation)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempentertainment)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempclothing)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempgas)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempcommuting)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempcharity)
+            write(f, "\r\n")
+            @printf(f, "%.2f", tempmedicalExpenses)
+
+            close(f)
+
+
+            break;
+        end
+
+    end
+    close(f)
 end
-if(rent > 0.3*income)
-  write(f, "\r\nWe recommend you spend less on rent. Rent expenses should not exceed more than 30% of your income.\r\n")
-end
-if(entertainment > 0.05*income)
-  write(f, "\r\nWe recommend you spend less on entertainment. Entertainment expenses should not exceed more than 5% of your income.\r\n")
-end
-if(clothing > 0.05*income)
-    write(f, "\r\nWe recommend you spend less on clothing. Clothing expenses should not exceed more than 5% of your income.\r\n")
-end
-if(loansAndDebtTotal > 0.1*income)
-  write(f, "\r\nWe recommend you reduce your debt. Debt repayment expenses should not exceed more than 10% of your income.\r\n")
-end
-if(utilityTotal > 0.1*income)
-  write(f, "\r\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\r\n")
-end
-if(utilityTotal > 0.1*income)
-  write(f, "\r\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\r\n")
-end
-if(savingsAndInvestments > 0.1*income)
-  write(f, "\r\nYour savings and investments do not exceed more than 10% of your income.\r\n")
-end
-if(totalIns > 0.15*income)
-  write(f, "\r\nDo not spend more than 15% of your income on insurance.\r\n")
-end
- close(f)

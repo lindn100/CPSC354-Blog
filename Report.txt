@@ -1,0 +1,48 @@
+This is your PET 
+Income
+1. Income: $415.38
+
+Loans / Debt
+2. Mortgage/Rent: $207.69
+3. Credit Card Debt: $0.00
+4. Car loan debt: $0.00
+5. Home equity loan: $0.00
+6. Student loan debt: $0.00
+Total Loans and Debt: $207.69
+
+Utilities
+7. Gas/Oil: $4.62
+8. Electricity: $2.31
+9. Telephone: $32.00
+10. Water and Sewer: $2.31
+
+Insurance Premiums
+11. Life Insurance: $0.00
+12. Auto Insurance: $0.00
+13. Home Insurance: $2.31
+14. Health Insurance: $0.00
+15. Long Term Care: $0.00
+Total Insurance Premiums: $2.31
+
+Savings and Investments
+16. Emergency Fund: $46.15
+17. College Savings: $0.00
+18. Retirement: $0.00
+Total Savings and Investments: $46.15
+
+Miscellaneous
+19. Groceries: $115.38
+20. Child Care: $0.00
+21. Vacation: $23.08
+22. Entertainment: $23.08
+23. Clothing: $13.85
+24. Gas: $13.85
+25. Commuting: $0.00
+26. Charitable Contributions: $0.00
+27. Out-of-Pocket Medical Expenses: $0.00
+Total Miscellaneous costs: $189.24
+
+
+Total Income: $415.38
+Total Expenses: $486.63
+Income minus Exenses: $-71.25
