@@ -15,7 +15,7 @@ BigFloat(π) = 3.141592653589793238462643383279502884197169399375105820974944592
 
 The default precision for BigFloat is 256 bits. BigFloat(1) + pi returns 4.141592653589793238462643383279502884197169399375105820974944592307816406286198 whereas if pi was stored as a float64 we would get BigFloat(1) + Float64(pi) = 4.141592653589793115997963468544185161590576171875000000000000000000000000000000
 
-Using setprecision, BigFloat will compute π to the precision you is set:
+Using setprecision, BigFloat will compute π to the precision you set:
 ```
 setprecision(BigFloat, 1024) do
     BigFloat(pi)
