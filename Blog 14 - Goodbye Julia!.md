@@ -11,4 +11,6 @@ We would recommend Julia to someone looking for a very fast language, implementi
 A lot has been learned on our journey with Julia, and we both feel like we came out of this experience as better programmers with a deeper understanding of Programming Languages as a whole.
 
 For further information on how to run our Julia program, please see our post on [Installing Julia](https://github.com/lindn100/CPSC354-Blog/blob/master/Installing%20Julia.md).
-**I'm afraid that is all we have. Special thanks goes to Prof. Kurz for allowing us to explore a language we had not heard of before this semester, as well as our peers who followed along with our blog and gave us advice/suggestions. Thank you all for all your help. Have a great day!**
+
+
+**I'm afraid that is all we have. Special thanks go to Prof. Kurz for allowing us to explore a language we had not heard of before this semester, as well as our peers who followed along with our blog and gave us advice/suggestions. Thank you all for all your help. Have a great day!**
