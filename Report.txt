@@ -1,6 +1,6 @@
 This is your PET 
 Income
-1. Income: $415.38
+1. Income: $484.62
 
 Loans / Debt
 2. Mortgage/Rent: $207.69
@@ -11,38 +11,44 @@ Loans / Debt
 Total Loans and Debt: $207.69
 
 Utilities
-7. Gas/Oil: $4.62
-8. Electricity: $2.31
-9. Telephone: $32.00
-10. Water and Sewer: $2.31
+7. Gas/Oil: $0.00
+8. Electricity: $0.00
+9. Telephone: $0.00
+10. Water and Sewer: $0.00
 
 Insurance Premiums
 11. Life Insurance: $0.00
 12. Auto Insurance: $0.00
-13. Home Insurance: $2.31
+13. Home Insurance: $0.00
 14. Health Insurance: $0.00
 15. Long Term Care: $0.00
-Total Insurance Premiums: $2.31
+Total Insurance Premiums: $0.00
 
 Savings and Investments
-16. Emergency Fund: $46.15
+16. Emergency Fund: $0.00
 17. College Savings: $0.00
 18. Retirement: $0.00
-Total Savings and Investments: $46.15
+Total Savings and Investments: $0.00
 
 Miscellaneous
-19. Groceries: $115.38
+19. Groceries: $0.00
 20. Child Care: $0.00
-21. Vacation: $23.08
-22. Entertainment: $23.08
-23. Clothing: $13.85
-24. Gas: $13.85
+21. Vacation: $0.00
+22. Entertainment: $0.00
+23. Clothing: $0.00
+24. Gas: $60.00
 25. Commuting: $0.00
 26. Charitable Contributions: $0.00
 27. Out-of-Pocket Medical Expenses: $0.00
-Total Miscellaneous costs: $189.24
+Total Miscellaneous costs: $60.00
 
 
-Total Income: $415.38
-Total Expenses: $486.63
-Income minus Exenses: $-71.25
+Total Income: $484.62
+Total Expenses: $267.69
+Income minus Expenses: $216.93
+
+*** Recommendations ***
+
+We recommend you spend less on rent. Rent expenses should not exceed more than 30% of your income.
+
+We recommend you reduce your debt. Debt repayment expenses should not exceed more than 10% of your income.

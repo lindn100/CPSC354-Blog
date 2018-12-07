@@ -54,26 +54,26 @@ global totalExpenses = 0
 global netIncome = 0
 
 if(reportStyle == "n")
-    print("Great! Let's start with your income. Please enter your income for the month: ")
+    print("Great! Let's start with your income. Please enter your income for the month: \$")
     income = parse(Float32, readline())
     income = (income *12) / 52 #taking month, converting to yearly, making it weekly
     println()
-    print("Now, let move onto loans and debt. Please enter your mortgage/rent payment for the month: ")
+    print("Now, let move onto loans and debt. Please enter your mortgage/rent payment for the month: \$")
     rent  = parse(Float32, readline())
     rent = (rent * 12) / 52
-    print("Please enter your credit card debt payment for the month: ")
+    print("Please enter your credit card debt payment for the month: \$")
     creditCardDebt = parse(Float32, readline())
     creditCardDebt = (creditCardDebt * 12) / 52
     println()
-    print("Please enter your home equity loan payment for the month: ")
+    print("Please enter your home equity loan payment for the month: \$")
     homeEquityLoan = parse(Float32, readline())
     homeEquityLoan = (homeEquityLoan * 12) / 52
     println()
-    print("Please enter your car loan payment for the month: ")
+    print("Please enter your car loan payment for the month: \$")
     carLoan = parse(Float32, readline())
     carLoan = (carLoan * 12) / 52
     println()
-    print("Please enter your student loan payment for the month: ")
+    print("Please enter your student loan payment for the month: \$")
     studentLoan = parse(Float32, readline())
     studentLoan = (studentLoan * 12) / 52
     println()
@@ -84,19 +84,19 @@ if(reportStyle == "n")
     @printf "%.2f" loansAndDebtTotal
     println()
 
-    print("Let's move onto Utilities. Please enter your gas and oil payments for the month: ")
+    print("Let's move onto Utilities. Please enter your gas and oil payments for the month: \$")
     gasAndOil = parse(Float32, readline())
     gasAndOil = (gasAndOil * 12) / 52
     println()
-    print("Please enter your electricity payment for the month: ")
+    print("Please enter your electricity payment for the month: \$")
     electricity = parse(Float32, readline())
     electricity = (electricity * 12) / 52
     println()
-    print("Please enter your telephone payment for the month: ")
+    print("Please enter your telephone payment for the month: \$")
     telephone = parse(Float32, readline())
     telephone = (telephone * 12) / 52
     println()
-    print("Please enter your water and sewer payment for the month: ")
+    print("Please enter your water and sewer payment for the month: \$")
     waterAndSewer = parse(Float32, readline())
     waterAndSewer = (waterAndSewer * 12) / 52
     println()
@@ -106,23 +106,23 @@ if(reportStyle == "n")
     @printf "%.2f" utilityTotal
     println()
 
-    print("Next up is insurance payments. Please enter your life insurance payment for the month: ")
+    print("Next up is insurance payments. Please enter your life insurance payment for the month: \$")
     lifeIns = parse(Float32, readline())
     lifeIns = (lifeIns * 12) / 52
     println()
-    print("Please enter your auto insurance payment for the month: ")
+    print("Please enter your auto insurance payment for the month: \$")
     autoIns = parse(Float32, readline())
     autoIns = (autoIns * 12) / 52
     println()
-    print("Please enter your home/renter's insurance payment for the month: ")
+    print("Please enter your home/renter's insurance payment for the month: \$")
     homeIns = parse(Float32, readline())
     homeIns = (homeIns * 12) / 52
     println()
-    print("Please enter your health insurance payment for the month: ")
+    print("Please enter your health insurance payment for the month: \$")
     healthIns = parse(Float32, readline())
     healthIns = (healthIns * 12) / 52
     println()
-    print("Please enter your Long Term Care payment for the month: ")
+    print("Please enter your Long Term Care payment for the month: \$")
     ltcIns = parse(Float32, readline())
     ltcIns = (ltcIns * 12) / 52
     totalIns = lifeIns + autoIns + homeIns + healthIns + ltcIns
@@ -132,15 +132,15 @@ if(reportStyle == "n")
     println()
 
     println()
-    print("Now, let's focus on Savings and Investments. Please enter your emergency fund savings for the month: ")
+    print("Now, let's focus on Savings and Investments. Please enter your emergency fund savings for the month: \$")
     emergencyFunds = parse(Float32, readline())
     emergencyFunds = (emergencyFunds * 12) / 52
     println()
-    print("Please enter your college savings for the month: ")
+    print("Please enter your college savings for the month: \$")
     collegeSavings = parse(Float32, readline())
     collegeSavings = (collegeSavings * 12) / 52
     println()
-    print("Please enter your retirement savings for the month: ")
+    print("Please enter your retirement savings for the month: \$")
     retirement = parse(Float32, readline())
     retirement = (retirement * 12) / 52
     savingsAndInvestments = emergencyFunds + collegeSavings + retirement
@@ -150,39 +150,39 @@ if(reportStyle == "n")
     println()
 
     println()
-    print("Finally, let's note your miscellaneous expenses. Please enter your groceries payment for the month: ")
+    print("Finally, let's note your miscellaneous expenses. Please enter your groceries payment for the month: \$")
     groceries = parse(Float32, readline())
     groceries = (groceries * 12) / 52
     println()
-    print("Please enter your child care payment for the month: ")
+    print("Please enter your child care payment for the month: \$")
     childCare = parse(Float32, readline())
     childCare = (childCare * 12) / 52
     println()
-    print("Please enter your vacation payment for the month: ")
+    print("Please enter your vacation payment for the month: \$")
     vacation = parse(Float32, readline())
     vacation = (vacation * 12) / 52
     println()
-    print("Please enter your entertainment payment for the month: ")
+    print("Please enter your entertainment payment for the month: \$")
     entertainment = parse(Float32, readline())
     entertainment = (entertainment * 12) / 52
     println()
-    print("Please enter your clothing payment for the month: ")
+    print("Please enter your clothing payment for the month: \$")
     clothing = parse(Float32, readline())
     clothing = (clothing * 12) / 52
     println()
-    print("Please enter your gas payment for the month: ")
+    print("Please enter your gas payment for the month: \$")
     gas = parse(Float32, readline())
     gas = (gas * 12) / 52
     println()
-    print("Please enter your commuting payment for the month: ")
+    print("Please enter your commuting payment for the month: \$")
     commuting = parse(Float32, readline())
     commuting = (commuting * 12) / 52
     println()
-    print("Please enter your charitable contribution for the month: ")
+    print("Please enter your charitable contribution for the month: \$")
     charity = parse(Float32, readline())
     charity = (charity * 12) / 52
     println()
-    print("Please enter your out of pocket medical expenses for the month: ")
+    print("Please enter your out of pocket medical expenses for the month: \$")
     medicalExpenses = parse(Float32, readline())
     medicalExpenses = (medicalExpenses * 12) / 52
     miscTotal = groceries + childCare + vacation + entertainment + clothing + gas + commuting + charity + medicalExpenses
@@ -309,9 +309,10 @@ if(reportStyle == "n")
     @printf "%.2f" totalExpenses
     println()
     netIncome = income - totalExpenses
-    print("Income minus Exenses: \$")
+    print("Income minus Expenses: \$")
     @printf "%.2f" netIncome
     println()
+    println("Recommendations have been written to your Report.txt file. Have a great day!")
 
     f = open("Report.txt", "w")
     write(f, "This is your PET \r\n")
@@ -387,8 +388,37 @@ if(reportStyle == "n")
     @printf(f, "%.2f", income)
     write(f, "\r\nTotal Expenses: \$")
     @printf(f, "%.2f", totalExpenses)
-    write(f, "\r\nIncome minus Exenses: \$")
+    write(f, "\r\nIncome minus Expenses: \$")
     @printf(f, "%.2f", netIncome)
+
+    write(f, "\r\n\r\n*** Recommendations ***\r\n")
+    if(groceries > 0.15*income)
+        write(f, "\r\nWe recommend you spend less on groceries. Groceries expenses should not exceed more than 15% of your income.\r\n")
+    end
+    if(rent > 0.3*income)
+      write(f, "\r\nWe recommend you spend less on rent. Rent expenses should not exceed more than 30% of your income.\r\n")
+    end
+    if(entertainment > 0.05*income)
+      write(f, "\r\nWe recommend you spend less on entertainment. Entertainment expenses should not exceed more than 5% of your income.\r\n")
+    end
+    if(clothing > 0.05*income)
+        write(f, "\r\nWe recommend you spend less on clothing. Clothing expenses should not exceed more than 5% of your income.\r\n")
+    end
+    if(loansAndDebtTotal > 0.1*income)
+      write(f, "\r\nWe recommend you reduce your debt. Debt repayment expenses should not exceed more than 10% of your income.\r\n")
+    end
+    if(utilityTotal > 0.1*income)
+      write(f, "\r\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\r\n")
+    end
+    if(utilityTotal > 0.1*income)
+      write(f, "\r\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\r\n")
+    end
+    if(savingsAndInvestments > 0.1*income)
+      write(f, "\r\nYour savings and investments do not exceed more than 10% of your income.\r\n")
+    end
+    if(totalIns > 0.15*income)
+      write(f, "\r\nDo not spend more than 15% of your income on insurance.\r\n")
+    end
     close(f)
 
     f = open("dataForNextReport.txt", "w")
@@ -821,6 +851,7 @@ else
             print("Income minus Exenses: \$")
             @printf "%.2f" tempnetIncome
             println()
+            println("Recommendations have been written to your Report.txt file. Have a great day!")
 
             f = open("Report.txt", "w")
             write(f, "This is your PET \r\n")
@@ -896,9 +927,38 @@ else
             @printf(f, "%.2f", tempincome)
             write(f, "\r\nTotal Expenses: \$")
             @printf(f, "%.2f", temptotalExpenses)
-            write(f, "\r\nIncome minus Exenses: \$")
+            write(f, "\r\nIncome minus Expenses: \$")
             @printf(f, "%.2f", tempnetIncome)
-            close(f)
+
+            write(f, "\r\n\r\n*** Recommendations ***\r\n")
+            if(tempgroceries > 0.15*tempincome)
+                write(f, "\r\nWe recommend you spend less on groceries. Groceries expenses should not exceed more than 15% of your income.\r\n")
+            end
+            if(temprent > 0.3*tempincome)
+              write(f, "\r\nWe recommend you spend less on rent. Rent expenses should not exceed more than 30% of your income.\r\n")
+            end
+            if(tempentertainment > 0.05*tempincome)
+              write(f, "\r\nWe recommend you spend less on entertainment. Entertainment expenses should not exceed more than 5% of your income.\r\n")
+            end
+            if(tempclothing > 0.05*tempincome)
+                write(f, "\r\nWe recommend you spend less on clothing. Clothing expenses should not exceed more than 5% of your income.\r\n")
+            end
+            if(temploansAndDebtTotal > 0.1*tempincome)
+              write(f, "\r\nWe recommend you reduce your debt. Debt repayment expenses should not exceed more than 10% of your income.\r\n")
+            end
+            if(temputilityTotal > 0.1*tempincome)
+              write(f, "\r\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\r\n")
+            end
+            if(temputilityTotal > 0.1*tempincome)
+              write(f, "\r\nWe recommend you reduce your utility expenses. Utility expenses should not exceed more than 10% of your income.\r\n")
+            end
+            if(tempsavingsAndInvestments > 0.1*tempincome)
+              write(f, "\r\nYour savings and investments do not exceed more than 10% of your income.\r\n")
+            end
+            if(temptotalIns > 0.15*tempincome)
+              write(f, "\r\nDo not spend more than 15% of your income on insurance.\r\n")
+            end
+        close(f)
 
             f = open("dataForNextReport.txt", "w")
             @printf(f, "%.2f", tempincome)
@@ -954,13 +1014,9 @@ else
             @printf(f, "%.2f", tempcharity)
             write(f, "\r\n")
             @printf(f, "%.2f", tempmedicalExpenses)
-
             close(f)
-
-
             break;
         end
 
     end
-    close(f)
 end
